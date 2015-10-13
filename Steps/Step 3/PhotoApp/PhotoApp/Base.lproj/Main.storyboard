@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="t2N-5v-0Oz">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="vsi-aV-VtY">
+            <objects>
+                <viewController id="hjI-en-sVG" customClass="HomeViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="a7T-9t-rl6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Mjp-uG-vyz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5kN-h9-yma">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPb-WA-xe5">
+                                <rect key="frame" x="200" y="436" width="200" height="44"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.015686274510000001" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="IFo-Ct-Ldw"/>
+                                    <constraint firstAttribute="height" constant="44" id="fIK-F6-Lud"/>
+                                </constraints>
+                                <state key="normal" title="Choose Photo">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="bpe-Hk-5Qu" kind="show" identifier="ShowPhoto" id="cXo-9n-fhj"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ironYard" translatesAutoresizingMaskIntoConstraints="NO" id="fnm-g8-1LF">
+                                <rect key="frame" x="165" y="121" width="270" height="270"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="270" id="9iT-zT-uSg"/>
+                                    <constraint firstAttribute="width" secondItem="fnm-g8-1LF" secondAttribute="height" multiplier="1:1" id="XRo-Sg-F02"/>
+                                    <constraint firstAttribute="width" constant="270" id="ds2-CM-Esi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fnm-g8-1LF" firstAttribute="centerX" secondItem="5kN-h9-yma" secondAttribute="centerX" id="EgF-Mw-6db"/>
+                            <constraint firstItem="CPb-WA-xe5" firstAttribute="centerX" secondItem="5kN-h9-yma" secondAttribute="centerX" id="Hfu-Df-35Z"/>
+                            <constraint firstItem="CPb-WA-xe5" firstAttribute="top" secondItem="fnm-g8-1LF" secondAttribute="bottom" constant="45" id="HwQ-OJ-Z0F"/>
+                            <constraint firstItem="fnm-g8-1LF" firstAttribute="top" secondItem="a7T-9t-rl6" secondAttribute="bottom" constant="57" id="eFQ-z3-8r2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Fm0-vo-3eq"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DYj-8p-i3V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="519" y="-1121"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="ne9-4f-PaY">
+            <objects>
+                <viewController id="bpe-Hk-5Qu" customClass="PhotoViewController" customModule="PhotoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="zVo-Jy-78I"/>
+                        <viewControllerLayoutGuide type="bottom" id="vw5-UU-C5H"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Tx9-WF-QZw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="t86-Yd-8KF">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                            </imageView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.015686274510000001" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="t86-Yd-8KF" firstAttribute="height" secondItem="Tx9-WF-QZw" secondAttribute="height" id="1ez-jE-DUA"/>
+                            <constraint firstItem="t86-Yd-8KF" firstAttribute="centerY" secondItem="Tx9-WF-QZw" secondAttribute="centerY" id="1mj-Tk-Qev"/>
+                            <constraint firstItem="t86-Yd-8KF" firstAttribute="width" secondItem="Tx9-WF-QZw" secondAttribute="width" id="bm3-rm-Ljg"/>
+                            <constraint firstItem="t86-Yd-8KF" firstAttribute="centerX" secondItem="Tx9-WF-QZw" secondAttribute="centerX" id="uah-2n-mgd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cameraImageView" destination="t86-Yd-8KF" id="4aA-xp-fyB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WzO-Iy-Y9r" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1147" y="-1121"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="FwS-eV-3RB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="t2N-5v-0Oz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="HnD-dx-bBK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="hjI-en-sVG" kind="relationship" relationship="rootViewController" id="AIi-j0-rIC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DHT-Jj-cw0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-293" y="-1121"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ironYard" width="1024" height="1024"/>
+    </resources>
+</document>
