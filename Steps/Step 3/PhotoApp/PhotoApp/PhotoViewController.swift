@@ -10,18 +10,33 @@ import UIKit
 
 class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
+    /*
+            Add the PermissionScope object as a constant
+    */
+    
+    
     @IBOutlet weak var cameraImageView: UIImageView!
 
     let picker = UIImagePickerController()
 
-    //MARK: - View Lifecycle
+    var leftButton : UIBarButtonItem?
 
+    //MARK: - View Lifecycle
+    
     override func viewDidLoad() {
+    
         super.viewDidLoad()
+        
+        
+        /*
+            Setup initial Permission Scope object (using the options)
+        */
+        
+        
 
         picker.delegate = self
 
-        let leftButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add,
+        leftButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Add,
             target: self, action: "photofromLibrary:")
 
         self.navigationItem.leftBarButtonItem = leftButton
@@ -44,10 +59,25 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
     //MARK: - Action Method
 
     @IBAction func photofromLibrary(sender: UIBarButtonItem) {
+        
+        /*
+            Check Photos Permissions --
+        
+            Show ImagePicker if Authorized or 
+        
+            Request Permission via PermissionScope if Not Authorized
+        */
+        
+        
+        showImagePicker()
+    }
+    
+    func showImagePicker() {
+
         picker.allowsEditing = false
         picker.sourceType = .PhotoLibrary
         picker.modalPresentationStyle = .Popover
         presentViewController(picker, animated: true, completion: nil)
-        picker.popoverPresentationController?.barButtonItem = sender
+        picker.popoverPresentationController?.barButtonItem = leftButton
     }
 }
