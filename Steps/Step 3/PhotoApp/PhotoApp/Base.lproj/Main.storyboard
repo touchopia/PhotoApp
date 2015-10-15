@@ -76,7 +76,7 @@
                             </imageView>
                         </subviews>
                         <animations/>
-                        <color key="backgroundColor" red="0.015686274510000001" green="0.1450980392" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="t86-Yd-8KF" firstAttribute="height" secondItem="Tx9-WF-QZw" secondAttribute="height" id="1ez-jE-DUA"/>
                             <constraint firstItem="t86-Yd-8KF" firstAttribute="centerY" secondItem="Tx9-WF-QZw" secondAttribute="centerY" id="1mj-Tk-Qev"/>

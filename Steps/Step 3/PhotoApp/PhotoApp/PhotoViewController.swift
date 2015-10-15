@@ -27,12 +27,6 @@ class PhotoViewController: UIViewController, UIImagePickerControllerDelegate, UI
         self.navigationItem.leftBarButtonItem = leftButton
 
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        
-        self.navigationController?.navigationBarHidden = false
-        super.viewWillAppear(animated)
-    }
 
     //MARK: - ImagePickerDelegate Methods
 
